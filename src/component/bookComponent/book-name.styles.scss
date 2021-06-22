@@ -1,0 +1,15 @@
+.div-style {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 3px solid #c45a7a;
+  padding: 10px;
+  text-align: center;
+  width: 210px;
+  border-radius: 20px;
+  margin: 30px;
+  cursor: pointer;
+}
