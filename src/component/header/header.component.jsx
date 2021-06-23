@@ -8,7 +8,7 @@ const Header = ({ currentUser }) => (
     <div className="header-routes">
       {currentUser ? (
         <div className="header-route" onClick={() => auth.signOut()}>
-          {currentUser.email}
+          SIGN OUT
         </div>
       ) : (
         <Link className="header-route" to="/signin">

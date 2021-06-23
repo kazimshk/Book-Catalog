@@ -7,8 +7,10 @@ import LandingPage from "./pages/landing-page/landing-page.component";
 import { auth, userData } from "./component/firebase/firebase.utils";
 import Header from "./component/header/header.component";
 //import { userData } from './component/firebase/firebase.utils';
-import { login, isLogin } from "./component/token/token.utils";
+//import { login, isLogin } from "./component/token/token.utils";
 import BookListing from "./component/bookListing/book-listing";
+import PrivateRoute from "./component/routes/private-route.component";
+import PublicRoute from "./component/routes/public-route.component";
 import "./App.css";
 
 const Apps = () => {
@@ -36,13 +38,26 @@ const Apps = () => {
     <div>
       <Header currentUser={currentUser} />
       <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route exact path="/signin" component={SignInAndSignUpPage}></Route>
-        <Route exact path="/home" component={HomePage} />
-        <Route exact path="/main" component={BookListing} />
+        <PublicRoute
+          restricted={false}
+          component={SignInAndSignUpPage}
+          path="/signin"
+          exact
+        />
+        <PrivateRoute component={HomePage} path="/home" exact />
+        <PrivateRoute component={BookListing} path="/main" exact />
       </Switch>
     </div>
   );
 };
 
 export default Apps;
+
+// <Switch>
+//   <Route exact path="/" component={LandingPage} />
+//   <Route exact path="/signin" component={SignInAndSignUpPage}></Route>
+//   <Route exact path="/home" component={HomePage} />
+//   <Route exact path="/main" component={BookListing} />
+// </Switch>;
+
+//<PublicRoute restricted={false} component={LandingPage} path="/" exact />;

@@ -4,11 +4,14 @@ import "./author.detail.styles.scss";
 
 const AuthorDetail = () => {
   const products = useSelector((state) => state.allProducts.products);
+  const bookDetail = useSelector((state) => state.productbook);
+  const { Author } = bookDetail;
+  const author = Author;
   const renderList = products.map((product) => {
     const { bookName, Author } = product;
-    if (Author === "Robert") {
+    if (Author === author) {
       return (
-        <div key={Author}>
+        <div>
           <div className="content-detail">
             <ul>
               <li>{bookName}</li>

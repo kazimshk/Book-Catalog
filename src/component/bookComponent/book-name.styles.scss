@@ -1,15 +1,24 @@
+$bg-color: #c45a7a;
+$color: white;
+
 .div-style {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: fit-content;
 }
 
 button {
-  border: 3px solid #c45a7a;
+  border: 3px solid $bg-color;
   padding: 10px;
   text-align: center;
   width: 210px;
   border-radius: 20px;
   margin: 30px;
   cursor: pointer;
+  &:focus {
+    background-color: $bg-color;
+    color: $color;
+    border: 3px solid $color;
+  }
 }

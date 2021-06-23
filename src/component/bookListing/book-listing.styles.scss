@@ -1,13 +1,39 @@
 .base {
   display: flex;
-}
-
-.left-panel {
-  width: 70%;
   background-color: #f1f2ed;
+  justify-content: space-between;
+  height: 100vh;
+}
+.flexbox-item {
+  margin: 5px;
+}
+.left-panel {
+  width: 400px;
+  flex-grow: 1;
+  margin: 0 120px;
 }
 
 .right-panel {
-  width: 30%;
+  width: 500px;
   background-color: #c45a7a;
 }
+.h3-all-books {
+  margin-left: 40px;
+}
+
+// .base {
+//   display: flex;
+//   background-color: #f1f2ed;
+// }
+
+// .left-panel {
+//   width: 70%;
+// }
+
+// .right-panel {
+//   width: 30%;
+//   background-color: #c45a7a;
+// }
+// .h3-all-books {
+//   margin-left: 70px;
+// }
