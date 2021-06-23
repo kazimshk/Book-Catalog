@@ -36,6 +36,7 @@ const Apps = () => {
 
   return (
     <div>
+      <PublicRoute restricted={false} component={BookListing} path="/" exact />;
       <Header currentUser={currentUser} />
       <Switch>
         <PublicRoute
