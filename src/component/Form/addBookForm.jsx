@@ -36,7 +36,13 @@ const AddForm = () => {
       <button
         class="btn-round"
         type="submit"
-        onClick={() => AddBookDetailDB({ book, genre, author })}
+        onClick={() => {
+          AddBookDetailDB({ book, genre, author }).then(() => {
+            setBook("");
+            setAuthor("");
+            setGenre("");
+          });
+        }}
       >
         +
       </button>

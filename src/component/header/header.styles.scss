@@ -1,24 +1,16 @@
 .header {
   height: 70px;
-  width: 3700px;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
-
-  .header-routes {
-    width: 52%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #f1f2ed;
-    justify-content: flex-end;
-
-    .header-route {
-      padding: 10px 15px;
-      text-decoration: none;
-      color: black;
-      font-size: large;
-      margin-right: 30px;
-      cursor: pointer;
-    }
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 25px;
+  background-color: #f1f2ed;
+  .header-route {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: rgb(187, 75, 93);
+    margin-right: 30px;
+    cursor: pointer;
   }
 }

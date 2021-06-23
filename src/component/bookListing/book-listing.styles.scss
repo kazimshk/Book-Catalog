@@ -1,11 +1,15 @@
+$bground-color: #c45a7a;
+$bg-white: white;
+$bg-lightgreen: #f1f2ed;
 .base {
   display: flex;
-  background-color: #f1f2ed;
+  background-color: $bg-lightgreen;
   justify-content: space-between;
   height: 100vh;
 }
 .flexbox-item {
   margin: 5px;
+  border-radius: 15px;
 }
 .left-panel {
   width: 400px;
@@ -15,25 +19,15 @@
 
 .right-panel {
   width: 500px;
-  background-color: #c45a7a;
+  background-color: $bground-color;
 }
 .h3-all-books {
   margin-left: 40px;
 }
 
-// .base {
-//   display: flex;
-//   background-color: #f1f2ed;
-// }
-
-// .left-panel {
-//   width: 70%;
-// }
-
-// .right-panel {
-//   width: 30%;
-//   background-color: #c45a7a;
-// }
-// .h3-all-books {
-//   margin-left: 70px;
-// }
+.div-title {
+  display: flex;
+  justify-content: center;
+  color: $bground-color;
+  background-color: $bg-lightgreen;
+}

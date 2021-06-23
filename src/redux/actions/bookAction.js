@@ -13,3 +13,22 @@ export const selectedBook = (book) => {
     payload: book,
   };
 };
+
+export const resetBook = () => {
+  return {
+    type: ActionTypes.RESET_BOOK,
+  };
+};
+
+export const loginUser = (currentUser) => {
+  return {
+    type: ActionTypes.LOGIN_USER,
+    payload: currentUser,
+  };
+};
+
+export const logoutUser = () => {
+  return {
+    type: ActionTypes.LOGOUT_USER,
+  };
+};

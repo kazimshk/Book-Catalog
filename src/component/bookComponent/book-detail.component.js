@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "./book-detail.styles.scss";
-import { selectedBook } from "../../redux/actions/bookAction";
+import { resetBook } from "../../redux/actions/bookAction";
 import { useDispatch } from "react-redux";
 
 const BookDetail = () => {
@@ -10,6 +10,16 @@ const BookDetail = () => {
   const { bookName, Genre, Author } = bookDetail;
   return (
     <div key={bookName}>
+      <div className="div-close">
+        <button
+          className="close"
+          onClick={() => {
+            dispatch(resetBook());
+          }}
+        >
+          close
+        </button>
+      </div>
       <div className="content-detail">
         <h2>{bookName}</h2>
         <h3>{Genre}</h3>

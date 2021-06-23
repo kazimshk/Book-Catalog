@@ -1,7 +1,6 @@
 import React from "react";
 import "./book-name.styles.scss";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { selectedBook } from "../../redux/actions/bookAction";
 import { useDispatch } from "react-redux";
 
@@ -14,8 +13,11 @@ const BookNameComponent = () => {
   const renderList = products.map((product) => {
     const { bookName } = product;
     return (
-      <div key={bookName}>
-        <button onClick={() => dispatch(selectedBook(product))}>
+      <div>
+        <button
+          className="btn-book-name"
+          onClick={() => dispatch(selectedBook(product))}
+        >
           {bookName}
         </button>
       </div>

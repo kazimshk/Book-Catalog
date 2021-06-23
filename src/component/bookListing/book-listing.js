@@ -40,11 +40,13 @@ const BookListing = () => {
   }, []);
   return (
     <>
+      <div className="div-title">
+        <h1>Ninja's Book Catalog</h1>
+      </div>
       <div className="base">
         <div className="flexbox-item left-panel div-style">
           <BookNameComponent />
         </div>
-
         {authorDetail && (
           <div className="flexbox-item right-panel">
             <BookDetail />

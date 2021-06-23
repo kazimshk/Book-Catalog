@@ -14,7 +14,6 @@ const config = {
 };
 
 export const userData = async (userAuth, otherdata) => {
-  console.log("Check here ", userAuth);
   if (!userAuth) {
     //if its null it will return
     return;
@@ -23,7 +22,6 @@ export const userData = async (userAuth, otherdata) => {
   const createdAt = new Date();
   const userRef = firestore.doc(`User/${userAuth.uid}`);
   const snapShot = await userRef.get();
-  console.log("heeeloo ", snapShot);
   if (!snapShot.exists) {
     try {
       userRef.set({
