@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { auth } from "../firebase/firebase.utils";
+import { useDispatch, useSelector } from "react-redux";
 import "./header.styles.scss";
+
+import { auth } from "../firebase/firebase.utils";
 import { logoutUser } from "../../redux/actions/bookAction";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 
 const Header = () => {
   const dispatch = useDispatch();

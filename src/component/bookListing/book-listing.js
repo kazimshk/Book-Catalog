@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { setBooks } from "../../redux/actions/bookAction";
+import { useDispatch, useSelector } from "react-redux";
+
+import "./book-listing.styles.scss";
+
+import { getBooks } from "../../redux/actions/bookAction";
 import firebase from "../../component/firebase/firebase.utils";
 import BookNameComponent from "../bookComponent/book-name.component";
 import BookDetail from "../bookComponent/book-detail.component";
 import AuthorDetail from "../bookComponent/author-detail";
 import AddForm from "../Form/addBookForm";
-import "./book-listing.styles.scss";
+
 const BookListing = () => {
   const bookDetail = useSelector((state) => state.productbook);
   const { Author } = bookDetail;
@@ -15,18 +17,8 @@ const BookListing = () => {
   const dispatch = useDispatch();
   const db = firebase.firestore();
 
-  const fetchProducts = async () => {
-    const response = await db
-      .collection("Books")
-      .get()
-      .then((snapshot) => {
-        return snapshot.docs.map((doc) => {
-          console.log(doc.data());
-          return doc.data();
-        });
-      });
-    console.log("console result", response);
-    dispatch(setBooks(response));
+  const fetchBooks = () => {
+    dispatch(getBooks());
   };
   let authorDetail;
   if (Author === undefined) {
@@ -36,7 +28,7 @@ const BookListing = () => {
   }
 
   useEffect(() => {
-    fetchProducts();
+    fetchBooks();
   }, []);
   return (
     <>

@@ -1,4 +1,3 @@
-import React from "react";
 import firebase from "../../component/firebase/firebase.utils";
 
 const db = firebase.firestore();

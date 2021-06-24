@@ -1,3 +1,5 @@
+@import "../../Styles/colors.scss";
+
 .custom-button {
   min-width: 165px;
   width: auto;
@@ -7,7 +9,7 @@
   padding: 0 35px 0 35px;
   font-size: 15px;
   background-color: black;
-  color: white;
+  color: $borderColor;
   text-transform: uppercase;
   font-family: "Open Sans Condensed";
   font-weight: bolder;
@@ -15,7 +17,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: white;
+    background-color: $borderColor;
     color: black;
     border: 1px solid black;
   }

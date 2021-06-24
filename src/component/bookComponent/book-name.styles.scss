@@ -1,5 +1,4 @@
-$bg-color: #c45a7a;
-$color: white;
+@import "../../Styles/colors.scss";
 
 .div-style {
   display: flex;
@@ -9,7 +8,7 @@ $color: white;
 }
 
 .btn-book-name {
-  border: 3px solid $bg-color;
+  border: 3px solid $bgColorBookInfoBox;
   padding: 10px;
   text-align: center;
   width: 210px;
@@ -17,8 +16,8 @@ $color: white;
   margin: 30px;
   cursor: pointer;
   &:focus {
-    background-color: $bg-color;
-    color: $color;
-    border: 3px solid $color;
+    background-color: $bgColorBookInfoBox;
+    color: $borderColor;
+    border: 3px solid $borderColor;
   }
 }

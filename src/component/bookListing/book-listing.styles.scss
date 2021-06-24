@@ -1,9 +1,8 @@
-$bground-color: #c45a7a;
-$bg-white: white;
-$bg-lightgreen: #f1f2ed;
+@import "../../Styles/colors.scss";
+
 .base {
   display: flex;
-  background-color: $bg-lightgreen;
+  background-color: $bgColorMain;
   justify-content: space-between;
   height: 100vh;
 }
@@ -19,7 +18,7 @@ $bg-lightgreen: #f1f2ed;
 
 .right-panel {
   width: 500px;
-  background-color: $bground-color;
+  background-color: $bgColorBookInfoBox;
 }
 .h3-all-books {
   margin-left: 40px;
@@ -28,6 +27,6 @@ $bg-lightgreen: #f1f2ed;
 .div-title {
   display: flex;
   justify-content: center;
-  color: $bground-color;
-  background-color: $bg-lightgreen;
+  color: $bgColorBookInfoBox;
+  background-color: $bgColorMain;
 }

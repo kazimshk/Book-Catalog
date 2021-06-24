@@ -1,8 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
 import "./book-detail.styles.scss";
+
 import { resetBook } from "../../redux/actions/bookAction";
-import { useDispatch } from "react-redux";
 
 const BookDetail = () => {
   const bookDetail = useSelector((state) => state.productbook);
