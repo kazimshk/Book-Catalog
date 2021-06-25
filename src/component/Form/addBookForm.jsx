@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+
 import "./addBookForm.styles.scss";
+
 import AddBookDetailDB from "../firebase/addBookFirebase";
+import { getBooks } from "../../redux/actions/bookAction";
 
 const AddForm = () => {
   const [book, setBook] = useState("");
   const [genre, setGenre] = useState("");
   const [author, setAuthor] = useState("");
-
+  const dispatch = useDispatch();
   return (
     <div className="form-div">
       <form className="form-content">
@@ -41,6 +45,7 @@ const AddForm = () => {
             setBook("");
             setAuthor("");
             setGenre("");
+            setTimeout(() => dispatch(getBooks()), 7000);
           });
         }}
       >

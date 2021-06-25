@@ -5,7 +5,7 @@ const intialState = {
 
 export const booksReducer = (state = intialState, { type, payload }) => {
   switch (type) {
-    case ActionTypes.SET_BOOKS:
+    case ActionTypes.GET_BOOKS:
       return { ...state, products: payload };
     default:
       return state;
@@ -13,7 +13,6 @@ export const booksReducer = (state = intialState, { type, payload }) => {
 };
 
 export const selectedBookReducer = (state = {}, { type, payload }) => {
-  console.log(type);
   switch (type) {
     case ActionTypes.SELECTED_BOOK:
       return { ...state, ...payload };
@@ -23,6 +22,7 @@ export const selectedBookReducer = (state = {}, { type, payload }) => {
       return state;
   }
 };
+
 export const loginUserReducer = (state = null, { type, payload }) => {
   switch (type) {
     case ActionTypes.LOGIN_USER:

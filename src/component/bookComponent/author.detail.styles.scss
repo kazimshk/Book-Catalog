@@ -1,6 +1,8 @@
+@import "../../Styles/colors.scss";
+
 ul {
   display: flex;
-  color: white;
+  color: $borderColor;
   justify-content: center;
   margin: 0;
 }

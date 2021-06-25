@@ -1,3 +1,5 @@
+@import "../../Styles/colors.scss";
+
 .header {
   height: 70px;
   width: 100vw;
@@ -5,11 +7,11 @@
   justify-content: flex-end;
   align-items: center;
   font-size: 25px;
-  background-color: #f1f2ed;
+  background-color: $bgColorMain;
   .header-route {
     padding: 10px 15px;
     text-decoration: none;
-    color: rgb(187, 75, 93);
+    color: bgColorBookInfoBox;
     margin-right: 30px;
     cursor: pointer;
   }

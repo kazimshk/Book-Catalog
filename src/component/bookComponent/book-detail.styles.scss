@@ -1,3 +1,12 @@
+@import "../../Styles//colors.scss";
+
+@mixin flex-prop {
+  height: 70px;
+  display: flex;
+  margin-right: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
 .content-detail {
   padding: 10px;
   margin-top: 20px;
@@ -6,21 +15,17 @@
 h2,
 h3 {
   display: flex;
-  color: white;
+  color: $borderColor;
   justify-content: center;
 }
 .div-close {
-  height: 70px;
-  display: flex;
-  margin-right: 20px;
-  justify-content: flex-end;
-  align-items: center;
+  @include flex-prop;
   .close {
-    color: rgb(221, 63, 89);
+    color: $bgColorBookInfoBox;
     font-size: 20px;
     width: 60px;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid $borderColor;
     &:hover {
       color: black;
       cursor: pointer;

@@ -1,5 +1,4 @@
 import firebase from "firebase/app";
-
 import "firebase/firestore";
 import "firebase/auth";
 
@@ -15,7 +14,6 @@ const config = {
 
 export const userData = async (userAuth, otherdata) => {
   if (!userAuth) {
-    //if its null it will return
     return;
   }
   const { email, displayName } = userAuth;

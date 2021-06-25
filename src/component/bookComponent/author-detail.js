@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+
 import "./author.detail.styles.scss";
 
 const AuthorDetail = () => {
@@ -7,8 +8,7 @@ const AuthorDetail = () => {
   const bookDetail = useSelector((state) => state.productbook);
   const { Author } = bookDetail;
   const author = Author;
-  const renderList = products.map((product) => {
-    const { bookName, Author } = product;
+  const renderList = products.map(({ bookName, Author }) => {
     if (Author === author) {
       return (
         <div>
